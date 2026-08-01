@@ -27,6 +27,12 @@ let car = {
     age:20
 }
 
+let student = {
+    name:"dinuka",
+    age:22,
+    payment:false
+}
+
 let stringCustomer = JSON.stringify(customer)
 
 localStorage.setItem("customer",stringCustomer)
@@ -49,3 +55,18 @@ let jsonCar = JSON.parse(reCar)
 
   console.log(jsonCar.name);
   
+  //-------------------------------------------------------
+
+  let stringStudent = JSON.stringify(student)
+
+  localStorage.setItem("student",stringStudent)
+
+  let reStudent = localStorage.getItem("student")
+
+  let jsonStudent = JSON.parse(reStudent)
+
+  console.log(jsonStudent.name);
+
+  //-------------------------------------------------------------
+  
+
