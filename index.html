@@ -1,15 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+
+
+    <style>
+        .form {
+            width: 500px;
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background-color: transparent;
+            backdrop-filter: blur(2px);
+            border: 2px solid;
+        }
+
+        input {
+            width: 280px;
+            height: 45px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            border: none;
+        }
+
+        body{
+            align-items: center;
+            display: flex;
+            background-position: center;
+            justify-content: left;
+            align-items: center;
+            height: 100vh;
+            background: url(img/pexels-dwi2793-35956956.jpg);
+            background-size: cover ;
+            background-position: center;
+            margin-left: 70px;
+        }
+
+        input[type="button"]{
+            background-color: blue;
+            padding: 8px 15px;
+            cursor: pointer;
+            margin-top: 5px;
+            color: white;
+            width: 150px;
+            transition: 0.03s 
+        }
+        h1{
+            color: white;
+            text-shadow: 100px;
+        }
+        
+    </style>
+
     
+
+    <div class="form">
+
+            <h1>CUSTOMER MANAGMENT SYSTEM</h1><br>
+        <input type="text" placeholder="id" id="txtCustomerId"><br><br>
+        <input type="text" placeholder="name" id="txtCustomerName"><br><br>
+        <input type="text" placeholder="age" id="txtCustomerAge"><br><br>
+        <input type="text" placeholder="address" id="txtCustomerAddress"><br>
+
+        <hr>
+
+      
+            <input type="button" value="Add Customer" onclick="btnAddCustomerOnAction()">
+            <input type="button" value="Search by Id" onclick="btnSearchByIdOnAction()">
+            <input type="button" value="Delete by Id" onclick="btnDeleteByIdOnAction()">
+            <input type="button" value="Update by Id" onclick="btnUpdateByIdOnAction()">
+            <input type="button" value="Clear Storage" onclick="btnClearStorgeOnAction()">
+            <input type="button" value="Load Table" onclick="btnLoadTableOnAction()">
+
+
+    </div>
 
 
 
     <script src="app.js"></script>
 </body>
+
 </html>

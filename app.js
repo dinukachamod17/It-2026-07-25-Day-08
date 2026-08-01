@@ -14,59 +14,103 @@
 // console.log(custName);
 
 //================================================================
-localStorage.clear()
+// localStorage.clear()
 
-let customer = {
-    name: "kamal",
-    age: 20,
-    inActive:true
-}
+// let customer = {
+//     name: "kamal",
+//     age: 20,
+//     inActive:true
+// }
 
-let car = {
-    name:"TOYOTA",
-    age:20
-}
+// let car = {
+//     name:"TOYOTA",
+//     age:20
+// }
 
-let student = {
-    name:"dinuka",
-    age:22,
-    payment:false
-}
+// let student = {
+//     name:"dinuka",
+//     age:22,
+//     payment:false
+// }
 
-let stringCustomer = JSON.stringify(customer)
+// let stringCustomer = JSON.stringify(customer)
 
-localStorage.setItem("customer",stringCustomer)
+// localStorage.setItem("customer",stringCustomer)
 
-let reCustomer = localStorage.getItem("customer")
+// let reCustomer = localStorage.getItem("customer")
 
- let JsonCustomer = JSON.parse(reCustomer)
+//  let JsonCustomer = JSON.parse(reCustomer)
 
- console.log(JsonCustomer.name);
- 
+//  console.log(JsonCustomer.name);
+
 //----------------------------------------------------------
 
- let stringCar = JSON.stringify(car)
+//  let stringCar = JSON.stringify(car)
 
- localStorage.setItem("car",stringCar)
+//  localStorage.setItem("car",stringCar)
 
- let reCar = localStorage.getItem("car")
+//  let reCar = localStorage.getItem("car")
 
-let jsonCar = JSON.parse(reCar)
+// let jsonCar = JSON.parse(reCar)
 
-  console.log(jsonCar.name);
-  
-  //-------------------------------------------------------
+//   console.log(jsonCar.name);
 
-  let stringStudent = JSON.stringify(student)
+//-------------------------------------------------------
 
-  localStorage.setItem("student",stringStudent)
+//   let stringStudent = JSON.stringify(student)
 
-  let reStudent = localStorage.getItem("student")
+//   localStorage.setItem("student",stringStudent)
 
-  let jsonStudent = JSON.parse(reStudent)
+//   let reStudent = localStorage.getItem("student")
 
-  console.log(jsonStudent.name);
+//   let jsonStudent = JSON.parse(reStudent)
 
-  //-------------------------------------------------------------
-  
+//   console.log(jsonStudent.name);
+
+//-------------------------------------------------------------
+
+
+const customerList = []
+
+function btnAddCustomerOnAction() {
+    let customer = {
+        id:document.getElementById("txtCustomerId").value,
+        name:document.getElementById("txtCustomerName").value,
+        age:document.getElementById("txtCustomerAge").value,
+        address:document.getElementById("txtCustomerAddress").value
+    }
+
+    console.log(customer);
+
+    customerList.push(customer)
+
+    console.log(customerList);
+
+    localStorage.setItem("customerList",JSON.stringify(customerList))
+    
+    
+}
+
+function btnSearchByIdOnAction() {
+    alert("Search customer")
+}
+
+function btnDeleteByIdOnAction() {
+    alert("Delete customer")
+}
+
+function btnUpdateByIdOnAction() {
+    alert("Update customer")
+}
+
+function btnClearStorgeOnAction() {
+    localStorage.clear()
+}
+
+function btnLoadTableOnAction() {
+    alert("Load Table")
+}
+
+
+
 
