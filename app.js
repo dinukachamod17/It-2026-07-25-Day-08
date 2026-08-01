@@ -35,7 +35,7 @@ let reCustomer = localStorage.getItem("customer")
 
  let JsonCustomer = JSON.parse(reCustomer)
 
- console.log(JsonCustomer);
+ console.log(JsonCustomer.name);
  
 //----------------------------------------------------------
 
@@ -47,5 +47,5 @@ let reCustomer = localStorage.getItem("customer")
 
 let jsonCar = JSON.parse(reCar)
 
-  console.log(jsonCar);
+  console.log(jsonCar.name);
   
